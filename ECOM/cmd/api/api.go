@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/almirpernen/Golang-Project/service/user"
+	"github.com/almirpernen/service/user"
 	"github.com/gorilla/mux"
 )
 
