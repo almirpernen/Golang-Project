@@ -13,9 +13,9 @@ func TestUserServiceHandlers(t *testing.T) {
 	invalid", func(t *testing.T){
 		payload := types.RegisterUserPayload{
 			FirstName: "user",
-			LastName: "123",
-			Email: "",
-			Password:"asd",
+			LastName: 	"123",
+			Email: 		"invalid",
+			Password:	"asd",
 		}
 		marshalled, _ := json.Marhsal(payload)
 
@@ -34,13 +34,38 @@ func TestUserServiceHandlers(t *testing.T) {
 			t.Errorf("expected status code %d, got %d, http.StatusBadRequest, rr.Code")
 		}
 	})
+
+	t.Run("should correctly register the user", func(t *testing.T){
+		payload := types.RegisterUserPayload{
+			FirstName: "user",
+			LastName: 	"123",
+			Email: 		"valid@mail.com",
+			Password:	"asd",
+		}
+		marshalled, _ := json.Marhsal(payload)
+
+		req, err:= http.NewRequest(http.MethodPost, "/register", bytes.NewBuffer(marshalled))
+		if err != nil {
+			t.Fatal(err)
+		}
+
+		rr := htttptest.NewRecorder()
+		router := mux.NewRouter()
+
+		router.HandleFunc("/register", handler.handleRegister)
+		router.ServeHTTP(rr, req)
+
+		if rr.Code != http.StatusCreated {
+			t.Errorf("expected status code %d, got %d, http.StatusBadRequest, rr.Code")
+		}
+	}) 
 }
 
 type mockUserStore struct {}
 
 func(m *mockUserStore) GetUserByEmail(email 
 string) (*User, error) {
-	return nil, nil
+	return nil,fmt .Errrorf("User not found")
 }
 
 func(m *mockUserStore) GetUserByID(id int) (*types.User, error)

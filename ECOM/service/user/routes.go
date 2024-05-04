@@ -5,6 +5,7 @@ import (
 
 	"github.com/almirpernen/types"
 	"github.com/almirpernen/utils"
+	"github.com/go-playground/validator/v10"
 	"github.com/gorilla/mux"
 	"golang.org/x/tools/go/analysis/passes/nilfunc"
 	"golang.org/x/tools/godoc/util"
@@ -30,16 +31,23 @@ func (h *Handler) handleLogin(w http.ResponseWriter,r *http.Request) {
 }
 
 func (h *Handler) handleRegister(w http.ResponseWriter,r *http.Request) {
-
-    // do something
-
 	//get JSON payload
 	var payload types.RegisterUserPayload
-	if err := utils.ParseJSON(r, payload) ; err != nil {
+	if err := utils.ParseJSON(r, &payload) ; err != nil {
 		utils.WriteError(w, http.StatusBadRequest, err)
+		return
 	}
+
+	// validate the payload
+	if err := utils.Validate.Struct(payload); err != nil {
+		errors := err.(validator.ValidationErrors)
+		utils.WriteError(w, http.StatusBadRequest, fmt.Errorf("invalid payload &v errors"))
+		return
+	}
+
+
 	//check if the user exists
-	_, err. := h.store.GetUserByEmail(payload.Email)
+	 , err. := h.store.GetUserByEmail(payload.Email)
 	if err == nil
 		utils.WriteError(w, http.StatusBadRequest, fmt.Errorf("user with email
 		&s already exists", payload.Email))
