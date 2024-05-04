@@ -5,7 +5,6 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-
 )
 
 type Config struct {
@@ -17,7 +16,7 @@ type Config struct {
 	DBName     string
 }
 
- var Envs = initConfig()
+var Envs = initConfig()
 
 func initConfig() Config {
 	godotenv.Load()
@@ -26,8 +25,8 @@ func initConfig() Config {
 		PublicHost: getEnv("PUBLIC_HOST", "http://localhost"),
 		Port:       getEnv("PORT", "8080"),
 		DBUser:     getEnv("DB_USER", "root"),
-		DBPassword: getEnv("DB_PASSWORD", "1234"),
-		DBAddress:  fmt.Sprintf("%s:%s", getEnv("DB_HOST", "localhost"), getEnv("DB_PORT", "3306")),
+		DBPassword: getEnv("DB_PASSWORD", "Orphei@152"),
+		DBAddress:  fmt.Sprintf("%s:%s", getEnv("DB_HOST", "127.0.0.1"), getEnv("DB_PORT", "3306")),
 		DBName:     getEnv("DB_NAME", "ecom"),
 	}
 }
@@ -37,6 +36,5 @@ func getEnv(key, fallback string) string {
 		return value
 	}
 
-
-return fallback
+	return fallback
 }

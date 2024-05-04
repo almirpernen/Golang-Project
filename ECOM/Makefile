@@ -1,8 +1,8 @@
 build:
-	@go build -o bin/ECOM cmd/main.go
+	@go build -o bin/ecom cmd/main.go
 
 test:
 	@go test -v./...
 
 run: build
-	@.bin/ECOM
+	@.bin/ecom
