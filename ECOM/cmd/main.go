@@ -29,6 +29,7 @@ func main() {
 	server := api.NewAPIServer(":8080", db)
 	if err := server.Run(); err != nil {
 		log.Fatal(err)
+		println("stemid")
 	}
 }
 
