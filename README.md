@@ -10,6 +10,8 @@ This project is a simple blog application implemented in Go (Golang) that includ
 
 
 ## Database Models Overview
+<img width="712" alt="Снимок экрана 2024-05-16 в 23 32 46" src="https://github.com/almirpernen/eshop/assets/123065546/5793b9a6-8921-48b7-b9b5-947e917576d8">
+
 
 ### User Model
 
