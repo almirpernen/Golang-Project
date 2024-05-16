@@ -5,7 +5,8 @@ This project is a simple blog application implemented in Go (Golang) that includ
 ## Author
 
  -Izbassarov Arman 22B030577
- 
+ -Pernen Almir 22B030577
+
 
 ## Database Models Overview
 
