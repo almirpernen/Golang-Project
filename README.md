@@ -4,7 +4,8 @@ This project is a simple blog application implemented in Go (Golang) that includ
 
 ## Author
 
-<!-- - Toleu Bahauddin 22B030598 -->
+ -Izbassarov Arman 22B030577
+ 
 
 ## Database Models Overview
 
