@@ -2,7 +2,8 @@
 
 This project is a simple blog application implemented in Go (Golang) that includes features such as CRUD operations for articles, comments, and user authentication.
 
-## Author
+## Authors
+
 
  - Izbassarov Arman 22B030577
  - Pernen Almir 22B030577
