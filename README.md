@@ -1,4 +1,4 @@
-# Final Project Golang 2024 Spring: Go Blog with Comments and Authentication
+# Final Project Golang 2024 Spring: Go Forumwith Comments and Authentication
 
 This project is based on Golang, and target audience of this app is drivers who loves their cars, and wanto lead their social media.
 
