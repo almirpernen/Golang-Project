@@ -1,6 +1,6 @@
 # Final Project Golang 2024 Spring: Go Blog with Comments and Authentication
 
-This project is a simple blog application implemented in Go (Golang) that includes features such as CRUD operations for articles, comments, and user authentication.
+This project is based on Golang, and target audience of this app is drivers who loves their cars, and wanto lead their social media.
 
 ## Authors
 
