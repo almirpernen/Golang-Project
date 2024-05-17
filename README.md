@@ -140,12 +140,12 @@ Unfollow User (protected)
 - Method: POST
 - Endpoint: /users/:id/unfollow
 
-#### Posts
+#### Bortzhurnal
 
-Create post(protected)
+Create bortzhurnal(protected)
 
 - Method: POST
-- Endpoint: /post
+- Endpoint: /bortzhurnal
 - Body:
 ```json
 {
@@ -153,20 +153,20 @@ Create post(protected)
 }
 ```
 
-List posts
+List of bortzhurnals
 
 - Method: GET
-- Endpoint: /post
+- Endpoint: /bortzhurnal
 
-GET post by ID
+GET bortzhurnal by ID
 
 - Method: GET
-- Endpoint: /post/:id
+- Endpoint: /bortzhurnal/:id
 
-Update post(protected)
+Update Bortzhurnal(protected)
 
 - Method: PUT
-- Endpoint: /post/:id
+- Endpoint: /bortzhurnal/:id
 
 ``` json
 {
@@ -174,20 +174,20 @@ Update post(protected)
 }
 ```
 
-Delete post(protected)
+Delete bortzhurnal(protected)
 
 - Method: DELETE
-- Endpoint: /post/:id
+- Endpoint: /bortzhurnal/:id
 
-Like post(protected)
-
-- Method: POST
-- Endpoint: /post/:id/like
-
-Unlike post(protected)
+Like bortzhurnal(protected)
 
 - Method: POST
-- Endpoint: /post/:id/unlike
+- Endpoint: /bortzhurnal/:id/like
+
+Unlike bortzhurnal(protected)
+
+- Method: POST
+- Endpoint: /bortzhurnal/:id/unlike
 
 #### Comments
 
@@ -206,34 +206,34 @@ Create comment(protected)
 List comments
 
 - Method: GET
-- Endpoint: /comment
+- Endpoint: /feedback
 
-Comment comment by ID
+Comment feedback by ID
 
 - Method: GET
-- Endpoint: /comment/:id
+- Endpoint: /feedback/:id
 
-Update comment(protected)
+Update feedback(protected)
 
 - Method: PUT
-- Endpoint: /comment/:id
+- Endpoint: /feedback/:id
 ``` json
 
 {
   "content": "your_updated_content"
 }
 ```
-Delete comment(protected)
+Delete feedback(protected)
 
 - Method: DELETE
-- Endpoint: /comment/:id
+- Endpoint: /feedback/:id
 
-Like comment(protected)
-
-- Method: POST
-- Endpoint: /comment/:id/like
-
-Unlike comment(protected)
+Like feedback(protected)
 
 - Method: POST
-- Endpoint: /comment/:id/unlike
+- Endpoint: /feedback/:id/like
+
+Unlike feedback(protected)
+
+- Method: POST
+- Endpoint: /feedback/:id/unlike
