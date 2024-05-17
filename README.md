@@ -93,21 +93,25 @@ This is a self-referencing many-to-many relationship where users can follow and 
 - Method: POST
 - Endpoint: /signup
 - Body:
+``` json
 
    {
     "username": "your_username",
     "password": "your_password"
   }
-  
+```
 #### Signin
 
 - Method: POST
 - Endpoint: /signin
 - Body:
+``` json
+
 {
   "username": "your_username",
   "password": "your_password"
 }
+```
 
 #### Users
 
@@ -143,9 +147,11 @@ Create post(protected)
 - Method: POST
 - Endpoint: /post
 - Body:
+```json
 {
   "content": "your_content"
 }
+```
 
 List posts
 
@@ -161,9 +167,12 @@ Update post(protected)
 
 - Method: PUT
 - Endpoint: /post/:id
+
+``` json
 {
   "content": "your_updated_content"
 }
+```
 
 Delete post(protected)
 
@@ -187,9 +196,12 @@ Create comment(protected)
 - Method: POST
 - Endpoint: /comment/:id
 - Body:
+``` json
+
 {
   "content": "your_content"
 }
+``` 
 
 List comments
 
@@ -205,10 +217,12 @@ Update comment(protected)
 
 - Method: PUT
 - Endpoint: /comment/:id
+``` json
+
 {
   "content": "your_updated_content"
 }
-
+```
 Delete comment(protected)
 
 - Method: DELETE
